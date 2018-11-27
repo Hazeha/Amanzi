@@ -4,10 +4,41 @@
 	<title>Amanzi PRvand</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/itempage.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/frontpage.css">
 </head>
 <body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript">
+$(function () {
+    $("#fileupload").change(function () {
+        $("#logo-preview").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#logo-preview").show();
+                $("#logo-preview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#logo-preview").show();
+                    $("#logo-preview").append("<img />");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#logo-preview").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {
+            alert("Please upload a valid image file.");
+        }
+    });
+});
+</script>
 
 	<header id="main-header">
 	<!-- Mangler design og billede -->
@@ -17,6 +48,9 @@
 	<nav>
 	  	<a href="index.html">Forside</a>
 	  	<a class="active" href="products.html">Produkter</a>
+	  	<a style="margin-left: 20px;" href="products.html">Item</a>
+	  	<a style="margin-left: 20px;" href="products.html">Item</a>
+	  	<a style="margin-left: 20px;" href="products.html">Item</a>
 	  	<a href="contact.html">Kontakt</a>
 	  	<a href="#">Prøve Vand</a>
 	  	<form>
@@ -26,7 +60,64 @@
 		<p class="copyright">&copy; Copyright. All rights reserved.<br> Amanzi 2018</p>
 	</nav>
 <!--Main Section mangler -->
-	<main>
+	<main id="item-wrapper">
+		<header id="page-header">
+			05l vand
+		</header>
+		<section id="item-section">
+			
+			<article id="item-designer">
+
+				
+				<img id="logo-preview" src="img" alt="your image" />
+    			
+			</article>
+			<article id="item-info">
+				
+
+
+				<form class="order-form" action="#">
+					<h2>Bestil vand</h2> 
+					
+    				<select>
+    					<option value="" disabled selected>Vælg mængden af vandflasker her</option>
+						<option value="1">5x24 Flasker - 399,- 3,3 pr. stk</option>
+						<option value="2">15x24 Flasker - 999,- 2.8 pr. stk</option>
+						<option value="3">30x24 Flasker - 1499,- 2.1 pr. stk</option>
+    				</select>
+
+    				<select>
+    					<option value="" disabled selected>Tilvælg design</option>
+						<option value="1">5x24 Flasker - 399,- 3,3 pr. stk</option>
+						<option value="2">15x24 Flasker - 999,- 2.8 pr. stk</option>
+						<option value="3">30x24 Flasker - 1499,- 2.1 pr. stk</option>
+    				</select>
+
+    				<input class="w3-check" type="checkbox" checked="checked">
+						<label>Logo Label</label>
+						<br>
+					<input class="w3-check" type="checkbox">
+						<label>Logo Låg - 0,6 DKK</label>
+						<br>
+					<input class="w3-check" type="checkbox" disabled>
+						<label>Logo Indtryk</label>
+						<hr>
+    				<p><input type="radio" name="quick"> Normal Ordre</p>
+    				<p><input type="radio" name="quick"> Hasteordre - 49,-</p>
+    					<hr>
+    					<p>Upload dit billede her</p>
+					<input type='file' id="fileupload" onchange="readURL(this);" />
+
+					<h4 class="pris">Total Pris : 399 DKK</h4>
+					<button>Tilføj til Kurv</button>
+				</form>
+			</article>
+		</section>
+		<section id="item-bottom">
+			
+		</section>
+
+
 	</main>
 
 
