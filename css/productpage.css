@@ -1,0 +1,63 @@
+
+
+
+
+/* PRODUCTS */
+
+
+#main-wrapper{
+
+}
+
+#item-libary{
+	width: calc(100% - 250px);
+	height: 750px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.item-article{
+	margin: 5px;
+	width: 32%;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.item-header h3{
+	margin: 20px auto 2px auto;
+}
+.item-img{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.item-footer{
+	height: 80px;
+	bottom: 0;
+	position: sticky;
+	margin: 0;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	display: block;
+}
+.item-footer h4{
+	margin: 0;
+	padding: 0;
+
+}
+.item-footer p{
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.item-footer a{
+	text-decoration: none;
+	color: black;
+	float: right;
+}
+.item-footer a:hover{
+	text-decoration: underline;
+	
+}
