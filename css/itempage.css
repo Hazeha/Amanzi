@@ -1,6 +1,5 @@
 
 
-
 /* ITEMPAGE */
 
 #item-wrapper{
@@ -16,27 +15,34 @@
 }
 
 #item-section{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	
 
 }
 #item-info{
-	
-	height: 400px;
-	width: 24%;
+	left: 0;
+	height: 500px;
 	display: block;
-	
-	padding: 10px;
-
+	float: right;
+}
+.add-info{
+	left: 0;
+	height: 500px;
+	display: block;
+	float: right;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
 }
 
 #item-designer{
-	width: 75%;
+	width: 49%;
+	height: 500px;
+	display: block;
 	float: left;
-	background-image: url(../img/bottle01.jpg);
+	
 	background-repeat: no-repeat;
-}
+	background-size: auto auto;
+}	
 #item-bottom{
 	width: 100%;
 	height: 240px;
@@ -55,16 +61,14 @@
 }
 #item-bottom table{
 	border-collapse: collapse;
-    border: 1px solid black;
     margin-left: 10px;
 }
-#logo-preview{
-
+#logo-preview-bottle1{
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
-    height: 75px;
-    width: 100px;
-    margin-left: 240px;
-    margin-top: 250px;
+    height: auto;
+    width: 170px;
+    margin-left: 100px;
+    margin-top: 320px;
     display: none;
 }
 span{
@@ -102,7 +106,7 @@ input[type="radio"]{
 	padding-top: 5px;
 }
 .order-form{
-	float: right;
+
 	display:table;
 	clear:both;
 	right: 0;
@@ -126,3 +130,69 @@ input[type="radio"]{
 .pris{
 
 }
+#indhold{
+	float: right;
+	display:table;
+	clear:both;
+	right: 0;
+	padding:0.01em 16px;
+	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 15px 0 rgba(0,0,0,0.19);
+	margin:0;
+	background-color:#f1f1f1;
+	color:#2196F3;
+}
+
+
+aside{
+	margin-bottom: 30px;
+	margin-left: 30px;
+	width: 230px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	float: right;
+}
+aside header h4{
+	margin: 0 auto 2px auto;
+	text-align: right;
+}
+aside img{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 110px;
+	
+}
+aside footer{
+	height: 80px;
+	bottom: 0;
+	position: sticky;
+	margin: 0;
+	background-color: #2196F3;
+	color: white;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	display: block;
+}
+aside footer h4{
+	margin: 0;
+	padding: 0;
+
+}
+aside footer p{
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+	float: left;
+	font-weight: bold;
+}
+aside footer a{
+	color: white;
+	float: right;
+	font-weight: bold;
+}
+aside footer a:hover{
+	text-decoration: underline;
+	
+}
+.animate-fading{animation:fading 19s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
