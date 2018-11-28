@@ -26,7 +26,9 @@ body{
 	margin-right: auto;
 }
 main{
-	width: 100%;
+	width: calc(100% - 252px);
+  height: 800px;
+  max-height: 800px;
 	margin: 0;
   margin-left: 250px;
 }
@@ -34,7 +36,7 @@ main{
 
 #main-header{
 	display: block;
-	background-color: lightgrey;
+
 	color: black;
 	height: 80px;
 	width: 100%;
@@ -58,16 +60,16 @@ nav{
 }
 nav a{
 	display: block;
-  	color: black;
+  	color: #2196F3;
   	padding: 16px;
   	text-decoration: none;
 }
 nav a.active{
-	background-color: #4267B2;
+	background-color: #2196F3;
   	color: white;
 }
 nav a:hover:not(.active) {
-  	background-color: #67D5F2;
+  	background-color: #D3D3D3;
   	color: white;
 }
 .copyright{

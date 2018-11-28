@@ -6,12 +6,11 @@
 
 
 #main-wrapper{
-
+	height: 800px;
 }
 
 #item-libary{
-	width: calc(100% - 250px);
-	height: 750px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
