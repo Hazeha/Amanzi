@@ -92,3 +92,22 @@ section{
 	margin: 10px;
 	width: 50%;
 }
+.info h2 { 
+    display: block;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.info h3 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.info p{
+	margin: 0;
+}
