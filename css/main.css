@@ -49,6 +49,15 @@ main{
 	color: black;
 	padding: 10px;
 }
+img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+  max-width: 120px; 
+}
 nav{
 	margin: 0;
   	padding: 0;
